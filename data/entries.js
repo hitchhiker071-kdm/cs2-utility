@@ -9,7 +9,7 @@ window.ENTRIES = {
   /* 道具类型徽章 */
   typeNames: { smoke: "烟", flash: "闪", fire: "火", he: "雷", tactic: "战术" },
   /* 投掷方式 */
-  throwNames: { jump: "跳投", run: "跑投", crouch: "蹲投", stand: "站投", walk: "走投" },
+  throwNames: { jump: "跳投", run: "跑投", crouch: "蹲投", stand: "站投", walk: "走投", crouchjump: "蹲跳投" },
 
   /* ============ 条目 ============
    * 字段说明（ADR-0004）：
@@ -30,20 +30,20 @@ window.ENTRIES = {
    */
   entries: [
     {
-      id: "dust2-example-smoke",
+      id: "dust2-zhongmen-flash",
       map: "dust2",
-      site: "A1",
-      type: "smoke",
-      name: "A1 烟（示例）",
-      throw: "jump",
-      aim: "这是示例条目：站位与瞄准点文字将在此处描述。",
-      effect: "示例效果描述：封住 A1 过点视线。",
-      source: "（示例来源，等你投递第一条真实素材后替换）",
-      url: "",
-      timestamp: "00:00",
-      media: "media/dust2/test-demo.webp",
+      site: "中门",
+      type: "flash",
+      name: "出中闪",
+      throw: "crouchjump",
+      aim: "",
+      effect: "对直架中门的敌人造成全白",
+      source: "CS2 道具教学视频（B站）",
+      url: "https://www.bilibili.com/video/BV1uDaGzSEAW/",
+      timestamp: "00:01",
+      media: "media/dust2/zhongmen-flash.webp",
       verified: false,
-      note: "示例条目，用于展示页面效果；真实条目由你投递视频+时间戳后录入。"
+      note: "蹲跳投；瞄准点描述待补充，可回看视频 00:01 起"
     }
   ]
 };
