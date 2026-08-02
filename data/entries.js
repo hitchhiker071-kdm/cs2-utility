@@ -44,6 +44,22 @@ window.ENTRIES = {
       media: "media/dust2/zhongmen-flash.webp",
       verified: false,
       note: "蹲跳投；瞄准点描述待补充，可回看视频 00:01 起"
+    },
+    {
+      id: "dust2-jingjia-smoke",
+      map: "dust2",
+      site: "警家",
+      type: "smoke",
+      name: "警家烟",
+      throw: "stand",
+      aim: "第一点位对齐 → 走到第二点位 → 左键投掷",
+      effect: "封住警家对沙地与B门的视野",
+      source: "CS2 道具教学视频（B站）",
+      url: "https://www.bilibili.com/video/BV1uDaGzSEAW/",
+      timestamp: "00:15",
+      media: "media/dust2/jingjia-smoke.webp",
+      verified: false,
+      note: ""
     }
   ]
 };
