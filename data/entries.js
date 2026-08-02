@@ -41,7 +41,7 @@ window.ENTRIES = {
       source: "（示例来源，等你投递第一条真实素材后替换）",
       url: "",
       timestamp: "00:00",
-      media: "",
+      media: "media/dust2/test-demo.webp",
       verified: false,
       note: "示例条目，用于展示页面效果；真实条目由你投递视频+时间戳后录入。"
     }
