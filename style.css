@@ -1,0 +1,187 @@
+:root {
+  --bg: #10151c;
+  --panel: #18202b;
+  --panel-2: #1f2937;
+  --text: #e6edf3;
+  --text-dim: #9aa7b4;
+  --accent: #f2a900;
+  --smoke: #8ea0b3;
+  --flash: #e8d44d;
+  --fire: #e25822;
+  --he: #7a8a3a;
+  --border: #2b3644;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+  line-height: 1.5;
+  padding-bottom: 40px;
+}
+
+/* ---------- 头部 ---------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(16, 21, 28, 0.96);
+  backdrop-filter: blur(6px);
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-row h1 { font-size: 20px; letter-spacing: 1px; }
+.subtitle { font-size: 12px; color: var(--text-dim); }
+
+#search {
+  flex: 1;
+  min-width: 200px;
+  padding: 9px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+}
+#search:focus { border-color: var(--accent); }
+
+/* ---------- 地图页签 ---------- */
+#map-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.map-tab {
+  padding: 7px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text-dim);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all .15s;
+}
+.map-tab:hover { color: var(--text); border-color: var(--text-dim); }
+.map-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1a1400;
+  font-weight: 600;
+}
+.map-tab .count {
+  font-size: 11px;
+  opacity: .7;
+  margin-left: 4px;
+}
+.map-tab:not(.active):not(.has-data) { opacity: .55; }
+
+/* ---------- 主内容 ---------- */
+main { padding: 16px; max-width: 960px; margin: 0 auto; }
+
+.group-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 18px 0 10px;
+  padding-left: 10px;
+  border-left: 4px solid var(--accent);
+  color: var(--accent);
+}
+
+/* ---------- 条目卡片 ---------- */
+.card {
+  display: flex;
+  gap: 14px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.card video, .card img.anim {
+  width: 240px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #000;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.card-body { flex: 1; min-width: 0; }
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.card-title { font-size: 16px; font-weight: 700; }
+
+.badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid;
+  white-space: nowrap;
+}
+.badge.smoke  { color: var(--smoke);  border-color: var(--smoke); }
+.badge.flash  { color: var(--flash);  border-color: var(--flash); }
+.badge.fire   { color: var(--fire);   border-color: var(--fire); }
+.badge.he     { color: var(--he);     border-color: var(--he); }
+.badge.throw  { color: var(--text-dim); border-color: var(--text-dim); }
+.badge.tactic { color: #b48ae8; border-color: #b48ae8; }
+
+.aim, .effect, .note {
+  font-size: 13.5px;
+  margin: 4px 0;
+}
+.aim b, .effect b, .note b { color: var(--accent); font-weight: 600; }
+.note { color: var(--text-dim); }
+
+.source {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 8px;
+}
+.source a { color: #6ab0f3; text-decoration: none; }
+.source a:hover { text-decoration: underline; }
+
+.verified { color: #3fb950; font-size: 12px; margin-left: 4px; }
+
+/* ---------- 空状态 / 搜索结果 ---------- */
+.empty {
+  text-align: center;
+  color: var(--text-dim);
+  padding: 48px 16px;
+  font-size: 14px;
+}
+.search-result-title { margin: 6px 0 14px; color: var(--text-dim); font-size: 13px; }
+
+footer {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 12px;
+  padding-top: 24px;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  .card { flex-direction: column; }
+  .card video, .card img.anim { width: 100%; }
+  header { flex-direction: column; align-items: stretch; }
+  .title-row { display: flex; justify-content: space-between; align-items: baseline; }
+}
