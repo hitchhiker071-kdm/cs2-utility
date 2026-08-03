@@ -172,6 +172,22 @@ window.ENTRIES = {
       media: "media/mirage/vip-smoke-5.webp",
       verified: false,
       note: "w+左键跳投"
+    },
+    {
+      id: "dust2-jingjia-ada-flash",
+      map: "dust2",
+      site: "警家",
+      type: "flash",
+      name: "警家自助反清A大闪",
+      throw: "doublekey",
+      aim: "",
+      effect: "对A大来的敌人全白（自助反清）",
+      source: "CS2 道具教学视频（B站）",
+      url: "https://www.bilibili.com/video/BV1kqsEzTExw/",
+      timestamp: "01:29",
+      media: "media/dust2/jingjia-ada-flash.webp",
+      verified: false,
+      note: "双键投掷"
     }
   ]
 };
