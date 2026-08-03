@@ -76,6 +76,22 @@ window.ENTRIES = {
       media: "media/dust2/axiao-baimid-flash.webp",
       verified: false,
       note: "双键投掷（左右键同时按，弹墙短闪）"
+    },
+    {
+      id: "mirage-man-vip-smoke",
+      map: "mirage",
+      site: "VIP",
+      type: "smoke",
+      name: "慢VIP烟",
+      throw: "jump",
+      aim: "",
+      effect: "封住VIP视野",
+      source: "CS2 道具教学视频（B站）",
+      url: "https://www.bilibili.com/video/BV1Z53P6BERW/",
+      timestamp: "00:03",
+      media: "media/mirage/man-vip-smoke.webp",
+      verified: false,
+      note: "w+左键跳投"
     }
   ]
 };
