@@ -9,7 +9,7 @@ window.ENTRIES = {
   /* 道具类型徽章 */
   typeNames: { smoke: "烟", flash: "闪", fire: "火", he: "雷", tactic: "战术" },
   /* 投掷方式 */
-  throwNames: { jump: "跳投", run: "跑投", crouch: "蹲投", stand: "站投", walk: "走投", crouchjump: "蹲跳投" },
+  throwNames: { jump: "跳投", run: "跑投", crouch: "蹲投", stand: "站投", walk: "走投", crouchjump: "蹲跳投", doublekey: "双键投掷" },
 
   /* ============ 条目 ============
    * 字段说明（ADR-0004）：
@@ -60,6 +60,22 @@ window.ENTRIES = {
       media: "media/dust2/jingjia-smoke.webp",
       verified: false,
       note: ""
+    },
+    {
+      id: "dust2-axiao-baimid-flash",
+      map: "dust2",
+      site: "A小",
+      type: "flash",
+      name: "A小白中路自助闪",
+      throw: "doublekey",
+      aim: "",
+      effect: "对中路看A小的敌人全白（自助闪）",
+      source: "CS2 道具教学视频（B站）",
+      url: "https://www.bilibili.com/video/BV17vqqYNE3m/",
+      timestamp: "00:06",
+      media: "media/dust2/axiao-baimid-flash.webp",
+      verified: false,
+      note: "双键投掷（左右键同时按，弹墙短闪）"
     }
   ]
 };
