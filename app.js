@@ -49,16 +49,21 @@
       content.innerHTML = `<div class="empty">${D.mapNames[mapKey]} 还没有收录条目。<br>看到想摘录的道具教学视频时，把「视频链接 + 时间戳 + 分类 + 用途」发来即可录入。</div>`;
       return;
     }
-    // 按点位分组，组内按类型顺序
+    // 按点位分组（无点位归「其他」，排最后），组内按类型顺序
     const typeOrder = ["smoke", "flash", "fire", "he", "tactic"];
     const groups = {};
-    list.forEach((e) => { (groups[e.site] = groups[e.site] || []).push(e); });
+    list.forEach((e) => { const k = e.site || "其他"; (groups[k] = groups[k] || []).push(e); });
     Object.values(groups).forEach((arr) =>
       arr.sort((a, b) => typeOrder.indexOf(a.type) - typeOrder.indexOf(b.type) || a.name.localeCompare(b.name, "zh"))
     );
 
     let html = "";
-    Object.keys(groups).sort((a, b) => a.localeCompare(b, "zh", { numeric: true })).forEach((site) => {
+    const siteKeys = Object.keys(groups).sort((a, b) => {
+      if (a === "其他") return 1;
+      if (b === "其他") return -1;
+      return a.localeCompare(b, "zh", { numeric: true });
+    });
+    siteKeys.forEach((site) => {
       html += `<h2 class="group-title">${site}</h2>`;
       groups[site].forEach((e) => { html += cardHTML(e); });
     });
